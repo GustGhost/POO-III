@@ -14,6 +14,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table(name = "animais")
 public class Animal implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

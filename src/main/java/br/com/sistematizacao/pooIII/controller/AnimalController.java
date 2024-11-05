@@ -3,6 +3,8 @@ package br.com.sistematizacao.pooIII.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,8 +30,9 @@ public class AnimalController {
     }
 
     @PostMapping
-    public Animal cadastrarAnimal(@Valid @RequestBody Animal animal) {
-        return animalService.cadastrarAnimal(animal);
+    public ResponseEntity<Animal> cadastrarAnimal(@Valid @RequestBody Animal animal) {
+        Animal savedAnimal = animalService.cadastrarAnimal(animal);
+        return new ResponseEntity<>(savedAnimal, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
