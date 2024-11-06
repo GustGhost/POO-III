@@ -1,4 +1,4 @@
-# Projeto CRUD com Banco de Dados H2
+# Sistema de adoção de animais
 
 Este projeto é uma aplicação que simula um sistema de adoção de animais e utiliza Java como linguagem, que utiliza o banco de dados H2 em memória para persistência de dados. O ponto de entrada da aplicação é o arquivo `Application`.
 
