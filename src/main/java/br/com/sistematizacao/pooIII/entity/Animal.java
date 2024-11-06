@@ -29,7 +29,7 @@ public class Animal implements Serializable {
     private String tipo;
 
     @Column(name = "idade")
-    private int idade;
+    private Integer idade;
 
     @Column(name = "raça")
     private String raca;
